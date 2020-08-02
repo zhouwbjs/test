@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        
+        ul{
+            list-style: none;
+            position: relative;margin: 200px;
+            width: 200px;height: 200px;
+            transform: rotateX(30deg) rotateY(30deg);
+            /* perspective: 1000px; */
+            transform-style: preserve-3d;
+            animation: move 13s infinite linear ;
+            /* transform-origin: 150px 150px -50px; */
+        }
+        @keyframes move{
+            0%{
+                transform: rotateX(30deg) rotateY(30deg);
+            }
+            100%{
+                transform: rotateX(390deg) rotateY(390deg);
+            }
+        }
+        /* 先旋转在位移 */
+        li{
+            width: 200px;
+            height: 200px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+        }
+        li:nth-child(1){
+            background: red;
+            transform: translateX(100px) rotateY(90deg) ;
+
+        }
+        li:nth-child(2){
+            background: greenyellow;
+            transform: translateX(-100px) rotateY(90deg) ;
+        }
+        li:nth-child(3){
+            background: slateblue;
+            transform:translateY(100px)  rotateX(90deg) ;
+        }
+        li:nth-child(4){
+            background: darkcyan;
+            transform: translateY(-100px)  rotateX(90deg);
+        }
+        li:nth-child(5){
+            background: darkorange;
+            transform:  translateZ(-100px);
+        }
+        li:nth-child(6){
+            background: khaki;
+            transform:  translateZ(100px);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
